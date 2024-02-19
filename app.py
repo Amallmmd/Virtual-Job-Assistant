@@ -1,6 +1,10 @@
 # building URL dynamically
 from flask import Flask,url_for,redirect,request,render_template
+from cs50 import sql
 
+db = sql.SQL("sqlite:////Users/amallmuhammed/Desktop/newproject/flask/hi.db")
+res=db.execute('select * from job')
+print(res)
 ## create object for WSGI application
 app = Flask(__name__)
 
