@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Job Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <h1>Virtual Job Assistant</h1>
+    <form action="{{ url_for('submit') }}",method="post">
+        <h3>Company Details</h3>
+        <textarea id="message" name="message" rows="10" cols="50" placeholder="Enter the job description..."></textarea>
+        <h3>Job profile</h3>
+        <textarea id="message" name="message" rows="10" cols="50" placeholder="Enter the job description..."></textarea>
+        <button type="submit">Generate ID</button>
+    </form>
+</body>
+</html>

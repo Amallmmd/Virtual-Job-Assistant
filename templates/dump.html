@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static',filename='scripts/script.js') }}"></script>
+</head>
+<body>
+    <h1>Welcome to My Homepage</h1><br>
+    <p>This is a basic HTML homepage using Flask.</p><br>
+    <form action= '/submit' method="post">
+        <label for="number">Enter a number</label>
+        <input type="number" id='number' name="number" placeholder="Enter number here">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+sum_val=10
+    if request.method=='POST':
+        val = request.form['number']
+        sum_val+=int(val)
+    
+    res = 'number'
